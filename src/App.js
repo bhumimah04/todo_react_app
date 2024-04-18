@@ -106,15 +106,15 @@ export default function App() {
 						<TextInput
 							mt={'md'}
 							ref={taskTitle}
-							placeholder={'Task Title'}
+							placeholder={'Recipe Title'}
 							required
-							label={'Title'}
+							label={'Add a Title'}
 						/>
 						<TextInput
 							ref={taskSummary}
 							mt={'md'}
-							placeholder={'Task Summary'}
-							label={'Summary'}
+							placeholder={'Recipe'}
+							label={'Write your recipe here'}
 						/>
 						<Group mt={'md'} position={'apart'}>
 							<Button
@@ -129,7 +129,7 @@ export default function App() {
 									createTask();
 									setOpened(false);
 								}}>
-								Create Task
+								Add Recipe
 							</Button>
 						</Group>
 					</Modal>
@@ -140,7 +140,7 @@ export default function App() {
 									fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 									fontWeight: 900,
 								})}>
-								My Tasks
+								My Recipes
 							</Title>
 							<ActionIcon
 								color={'blue'}
@@ -172,7 +172,7 @@ export default function App() {
 											<Text color={'dimmed'} size={'md'} mt={'sm'}>
 												{task.summary
 													? task.summary
-													: 'No summary was provided for this task'}
+													: 'No added recipe.'}
 											</Text>
 										</Card>
 									);
@@ -180,7 +180,7 @@ export default function App() {
 							})
 						) : (
 							<Text size={'lg'} mt={'md'} color={'dimmed'}>
-								You have no tasks
+								No recipe added
 							</Text>
 						)}
 						<Button
@@ -189,7 +189,7 @@ export default function App() {
 							}}
 							fullWidth
 							mt={'md'}>
-							New Task
+							New Recipe
 						</Button>
 					</Container>
 				</div>
